@@ -14,9 +14,9 @@ public class MoveDown : MonoBehaviour
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
 
-        if (transform.position.z < minLimY)
+        if (transform.position.y < minLimY)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             Debug.Log("GAME OVER");
             Destroy(gameObject);
         }

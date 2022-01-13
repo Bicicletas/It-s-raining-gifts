@@ -11,9 +11,11 @@ public class SpawnManager : MonoBehaviour
     private float spawnHorizontalLim = 7f;
 
     private float startAfterTime = 1f;
-    private float repeatRate = 2f;
+    private float repeatRate = 5f;
+
+    public Vector3 spawnPos;
     
-    void Update()
+    void Start()
     {
         InvokeRepeating("SpawnRandomObject", startAfterTime, repeatRate);
     }
@@ -27,8 +29,7 @@ public class SpawnManager : MonoBehaviour
     public void SpawnRandomObject()
     {
         int randomIndex = Random.Range(0, targetPrefabs.Length);
-        Instantiate(targetPrefabs[0],
-            RandomSpawnPosition(),
-            targetPrefabs[0].transform.rotation);
+        spawnPos = RandomSpawnPosition();
+        Instantiate(targetPrefabs[randomIndex], RandomSpawnPosition(), targetPrefabs[randomIndex].transform.rotation);
     }
 }

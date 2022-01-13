@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 250032361}
   - component: {fileID: 250032362}
   - component: {fileID: 250032363}
+  - component: {fileID: 250032364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -261,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  horizontalInput: 0
 --- !u!4 &250032360
 Transform:
   m_ObjectHideFlags: 0
@@ -316,6 +318,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!65 &250032364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250032358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9974564, y: 1.1124582, z: 1.3074865}
+  m_Center: {x: -0.33373553, y: 0.5962055, z: -0.0037498772}
 --- !u!1 &308282423
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +874,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04afd08da082049cdbba15465ca56400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPrefabs: []
+  targetPrefabs:
+  - {fileID: 1678538889804338286, guid: 9ade999fbe66b489086861eeb6591298, type: 3}
+  - {fileID: 8375757720603733122, guid: e805a3f9394e6404fa6bed76cb75ba87, type: 3}
+  - {fileID: 7730565692655100435, guid: 0ec10aa9d55d64a0fbe94f75eb5435c9, type: 3}
+  - {fileID: 3533157251685402489, guid: 557e9c33a8e744646bb536bb7a1ad098, type: 3}
+  - {fileID: 6489453454780299925, guid: 1537ce634459749e0ae9603d51e4c71c, type: 3}
+  - {fileID: 1135586312616514988, guid: cbc6092cd47594bcfa75dfdfd5fda297, type: 3}
+  - {fileID: 150382, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
+  - {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+  - {fileID: 140688, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+  - {fileID: 163828, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
 --- !u!4 &1124177427
 Transform:
   m_ObjectHideFlags: 0

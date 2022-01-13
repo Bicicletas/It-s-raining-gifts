@@ -6,11 +6,20 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
 
-    private float horizontalInput;
-    
-    void update()
+    public float horizontalInput;
+
+    private SpawnManager spawnManager;
+
+    private void Start()
     {
-        horizontalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        spawnManager = FindObjectOfType<SpawnManager>();
     }
+    void Update()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        //Vector3 aimBot = new Vector3(spawnManager.spawnPos.x, transform.position.y, transform.position.z);
+        transform.Translate(Vector3.right * spawnManager.spawnPos.x * speed * Time.deltaTime);
+    }
+
 }

@@ -7,17 +7,15 @@ public class ScreenLimits : MonoBehaviour
     private float xLimR = 7.8f;
     private float xLimL = -7.3f;
     
-    void Start()
+    void Update()
     {
         if (transform.position.x > xLimR)
         {
-            transform.position = new Vector3(xLimR, 
-                transform.position.y, transform.position.z);
+            transform.position = new Vector3(xLimR, transform.position.y, transform.position.z);
         }
         if (transform.position.x < xLimL)
         {
-            transform.position = new Vector3(xLimL, 
-                transform.position.y, transform.position.z);
+            transform.position = new Vector3(xLimL, transform.position.y, transform.position.z);
         }
     }
 }
